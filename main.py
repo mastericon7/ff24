@@ -31,20 +31,20 @@ def show_main_menu():
     menu_font = pygame.font.SysFont('Sans-Serif', 36)
     menu_options = ['Quick Match', 'Career', 'Fusion Team', 'Quit The Game']
     selected_option = 0
-    running = True
+    frunning = True
 
     # Load PNG images for different background colors
-    background_1 = pygame.image.load('quickmatch.png').convert()
-    background_2 = pygame.image.load('fc21.jpeg').convert()
-    background_3 = pygame.image.load('ff24lobby.png').convert()
-    background_4 = pygame.image.load('ffec.jpg').convert()
+    background_1 = pygame.image.load('data/images/quickmatch.png').convert()
+    background_2 = pygame.image.load('data/images/careermatch.png').convert()
+    background_3 = pygame.image.load('data/images/ff24lobby.png').convert()
+    background_4 = pygame.image.load('data/images/quitmatch.png').convert()
 
     # Define transition variables
     transitioning = False
     transition_duration = 50 # duration of transition
     transition_frame = 0
 
-    while running:
+    while frunning:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -58,7 +58,7 @@ def show_main_menu():
                     elif event.key == pygame.K_RETURN:
                         if selected_option == 0:
                             # Start the game
-                            running = False
+                           frunning = False
                         elif selected_option == 1:
                             # Show options
                             pass
@@ -117,7 +117,7 @@ pygame.init()
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 #images
-bg = pygame.image.load("FF24.png")
+bg = pygame.image.load("data/images/FF24.png")
 
 #texts
 white = (25, 120, 165)
@@ -131,6 +131,7 @@ text_rect.center = (960, 540)
 show_main_menu()
 running = True
 while running:
+    global frunning
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -138,8 +139,9 @@ while running:
     screen.blit(text, text_rect)
     
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_RIGHT]:
-        pos_x += 10
+    if keys[pygame.K_ESCAPE]:
+        frunning = True
+        show_main_menu()
 
     pygame.display.flip()
 
