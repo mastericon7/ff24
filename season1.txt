@@ -1,0 +1,63 @@
+houston
+myteam
+My team: 3 Enemy team: 0, 3 points
+houston
+myteam
+My team: 0 Enemy team: 5, 0 points
+uniteddc
+myteam
+My team: 3 Enemy team: 2, 3 points
+uniteddc
+myteam
+My team: 3 Enemy team: 2, 3 points
+man county
+myteam
+My team: 2 Enemy team: 7, 0 points
+houston
+myteam
+My team: 2 Enemy team: 0, 3 points
+uniteddc
+myteam
+My team: 2 Enemy team: 1, 3 points
+uniteddc
+myteam
+My team: 5 Enemy team: 2, 3 points
+man county
+myteam
+My team: 0 Enemy team: 3, 0 points
+uniteddc
+myteam
+My team: 3 Enemy team: 1, 3 points
+man county
+myteam
+My team: 3 Enemy team: 3, 1 points
+uniteddc
+myteam
+My team: 3 Enemy team: 2, 3 points
+man county
+myteam
+My team: 0 Enemy team: 1, 0 points
+man county
+myteam
+My team: 3 Enemy team: 0, 3 points
+man county
+myteam
+My team: 1 Enemy team: 4, 0 points
+uniteddc
+myteam
+My team: 2 Enemy team: 1, 3 points
+houston
+myteam
+My team: 4 Enemy team: 1, 3 points
+houston
+myteam
+My team: 2 Enemy team: 5, 0 points
+houston
+myteam
+My team: 0 Enemy team: 1, 0 points
+man county
+myteam
+My team: 0 Enemy team: 2, 0 points
+
+
+34 POINTS
