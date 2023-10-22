@@ -66,11 +66,11 @@ for _ in range(20):
             lev5match = randint(0, 2)
             leven5match = randint(0, 8)
         if lev5match > leven5match:
-            print(f'My team: {lev5match} Enemy team: {leven5match} 3 points')
+            print(f'My team: {lev5match} Enemy team: {leven5match}, 3 points')
         elif lev5match == leven5match:
-            print(f'My team: {lev5match} Enemy team: {leven5match} 1 points')
+            print(f'My team: {lev5match} Enemy team: {leven5match}, 1 points')
         elif lev5match < leven5match:
-            print(f'My team: {lev5match} Enemy team: {leven5match} 0 points')
+            print(f'My team: {lev5match} Enemy team: {leven5match}, 0 points')
     if levelme == 4:
         if levelen ==5:
             lev4match = randint(0, 4)
@@ -88,11 +88,11 @@ for _ in range(20):
             lev4match = randint(0, 2)
             leven4match = randint(0, 6)
         if lev4match > leven4match:
-            print(f'My team: {lev4match} Enemy team: {leven4match} 3 points')
+            print(f'My team: {lev4match} Enemy team: {leven4match}, 3 points')
         elif lev4match == leven4match:
-            print(f'My team: {lev4match} Enemy team: {leven4match} 1 points')
+            print(f'My team: {lev4match} Enemy team: {leven4match}, 1 points')
         elif lev4match < leven4match:
-            print(f'My team: {lev4match} Enemy team: {leven4match} 0 points')
+            print(f'My team: {lev4match} Enemy team: {leven4match}, 0 points')
     if levelme == 3:
         if levelen == 5:
             lev3match = randint(0, 5)
@@ -110,11 +110,11 @@ for _ in range(20):
             lev3match = randint(0, 2)
             leven3match = randint(0, 5)
         if lev3match > leven3match:
-            print(f'My team: {lev3match} Enemy team: {leven3match} 3 points')
-        elif lev2match == leven2match:
-            print(f'My team: {lev3match} Enemy team: {leven3match} 1 points')
+            print(f'My team: {lev3match} Enemy team: {leven3match}, 3 points')
+        elif lev3match == leven3match:
+            print(f'My team: {lev3match} Enemy team: {leven3match}, 1 points')
         elif lev3match < leven3match:
-            print(f'My team: {lev3match} Enemy team: {leven3match} 0 points')
+            print(f'My team: {lev3match} Enemy team: {leven3match}, 0 points')
     if levelme == 2:
         if levelen == 5:
             lev2match = randint(0, 7)
@@ -132,11 +132,11 @@ for _ in range(20):
             lev2match = randint(0, 3)
             leven2match = randint(0, 5)
         if lev2match > leven2match:
-            print(f'My team: {lev2match} Enemy team: {leven2match} 3 points')
+            print(f'My team: {lev2match} Enemy team: {leven2match}, 3 points')
         elif lev2match == leven2match:
-            print(f'My team: {lev2match} Enemy team: {leven2match} 1 points')
+            print(f'My team: {lev2match} Enemy team: {leven2match}, 1 points')
         elif lev2match < leven2match:
-            print(f'My team: {lev2match} Enemy team: {leven2match} 0 points')
+            print(f'My team: {lev2match} Enemy team: {leven2match}, 0 points')
     if levelme == 1:
         if levelen ==5:
             lev1match = randint(0, 8)
@@ -154,9 +154,8 @@ for _ in range(20):
             lev1match = randint(0, 4)
             leven1match = randint(0, 4)
         if lev1match > leven1match:
-            print(f'My team: {lev1match} Enemy team: {leven1match} 3 points')
+            print(f'My team: {lev1match} Enemy team: {leven1match}, 3 points')
         elif lev1match == leven1match:
-            print(f'My team: {lev1match} Enemy team: {leven1match} 1 points')
+            print(f'My team: {lev1match} Enemy team: {leven1match}, 1 points')
         elif lev1match < leven1match:
-            print(f'My team: {lev1match} Enemy team: {leven1match} 0 points')
-        
+            print(f'My team: {lev1match} Enemy team: {leven1match}, 0 points')
