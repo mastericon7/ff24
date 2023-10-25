@@ -1,5 +1,6 @@
 import pygame
 from random import randint
+from careermatch import game
 
 pygame.init()
 screen_width = 1920
@@ -13,16 +14,15 @@ bg = pygame.image.load("data/images/FF24.png").convert
 white = (25, 120, 165)
 font = pygame.font.Font(None, 36)
 text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True, white)
+text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True, white)
+score2text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True, white)
+
 
 text_rect = text.get_rect()
 text_rect.center = (960, 540)
 
-def careermatch():
-    ranomin = randint(0, 9)
-    print(ranomin)
-    return
 
-careermatch()
+
 running = True
 while running:
     global frunning
