@@ -14,14 +14,9 @@ bg = pygame.image.load("data/images/FF24.png").convert
 white = (25, 120, 165)
 font = pygame.font.Font(None, 36)
 text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True, white)
-text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True, white)
-score2text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True, white)
-
 
 text_rect = text.get_rect()
 text_rect.center = (960, 540)
-
-
 
 running = True
 while running:

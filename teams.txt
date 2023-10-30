@@ -1,0 +1,31 @@
+Spanish Division 1
+    Madrid White
+    Girona Red
+    Barcelona Blue    
+    Madrid Red
+    Sebastian Blue
+    Bilbao Red
+    Sevilla Green
+    Vallecas White
+    Valencia White
+    Las Palmas Green
+    Pamplona Red
+    Getafe Blue
+    Sevilla Red
+    Cadiz Yellow
+    Mallorca Red
+    Villareal Yellow
+    Vitoria Blue
+    Vigo Blue
+    Granada Red
+    Almeria Red
+
+English Division 1
+    Manchester Blue
+    London Red
+    London White
+    London Blue
+    Liverpool Red
+    Liverpool Blue
+    Birmingham Claret
+    Newcastle Gray
