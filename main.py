@@ -1,6 +1,7 @@
 import pygame
 import threading
 import math
+from packopening import *
 
 screen_width,screen_height = 1920, 1080
 """
@@ -46,6 +47,7 @@ def show_main_menu():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                clear_players_data()
                 return
             elif event.type == pygame.KEYDOWN:
                 if not transitioning:
@@ -114,6 +116,8 @@ def show_main_menu():
 
         pygame.display.flip()
         pygame.time.Clock().tick(320)
+    clear_players_data()
+    pygame.quit()
 def fusionteam():
     global screen
     
@@ -135,6 +139,7 @@ def fusionteam():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                clear_players_data()
             elif event.type == pygame.KEYDOWN:
                 if not transitioning:
                     if event.key == pygame.K_UP:
@@ -198,7 +203,8 @@ def fusionteam():
             menu_item_y += 80
         pygame.display.flip()
         pygame.time.Clock().tick(320)
-
+    clear_players_data()
+    pygame.quit()
 def packs():    
     global screen
 
@@ -230,6 +236,7 @@ def packs():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                clear_players_data()
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:
                     selected_option = (selected_option - 1) % (len(menu_options) + 3)
@@ -249,6 +256,12 @@ def packs():
                     if selected_option == 0:
                         # Start the game
                         fusionteam()
+                    elif selected_option == 1:
+                        packblue90()
+                    elif selected_option == 2:
+                        packblue80()
+                    elif selected_option == 3:
+                        packblue70()
 
         screen.fill((52, 52, 52))
 
@@ -272,6 +285,7 @@ def packs():
         target_y += (start_y - target_y) * 0.1
 
         pygame.display.flip()
+    clear_players_data()
     pygame.quit()
 
 #ends of defs and start of main
@@ -311,4 +325,5 @@ while running:
         show_main_menu()
     
     pygame.display.flip()
+clear_players_data()
 pygame.quit()

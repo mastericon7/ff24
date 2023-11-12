@@ -10,10 +10,10 @@ menu_options = ['My Team', 'Market', 'Packs', 'Main Menu']
 selected_option = 0
 frunning = True
 # Load PNG images for different background colors
-background_1 = pygame.image.load('data/images/myteammenu.png').convert()
-background_2 = pygame.image.load('data/images/marketmenu.png').convert()
-background_3 = pygame.image.load('data/images/packsmenu.png').convert()
-background_4 = pygame.image.load('data/images/quitmatch.png').convert()
+background_1 = pygame.image.load('data/images/myteammenu.png').convert_alpha()
+background_2 = pygame.image.load('data/images/marketmenu.png').convert_alpha()
+background_3 = pygame.image.load('data/images/packsmenu.png').convert_alpha()
+background_4 = pygame.image.load('data/images/quitmatch.png').convert_alpha()
 # Define transition variables
 transitioning = False
 transition_duration = 50 # duration of transition
