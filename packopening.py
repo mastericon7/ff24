@@ -65,13 +65,17 @@ def packmake70():
         with open("playersdata.txt", "a") as f:
             print('Maxime Roux - France 78', file=f)
     elif packopen70 == 3:
-        print('Diego Fernandez - Spain 76')
+        with open("playersdata.txt", "a") as f:
+            print('Diego Fernandez - Spain 76', file=f)
     elif packopen70 == 4:
-        print('Elena Costa - Brazil 75')
+        with open("playersdata.txt", "a") as f:
+            print('Elena Costa - Brazil 75', file=f)
     elif packopen70 == 5:
-        print('Andrei Petrov - Russia 74')
+        with open("playersdata.txt", "a") as f:
+            print('Andrei Petrov - Russia 74', file=f)
     elif packopen70 == 6:
-        print('Sofia Kovač - Croatia 70')
+        with open("playersdata.txt", "a") as f:
+            print('Sofia Kovač - Croatia 70', file=f)
     elif packopen70 == 7:
         print('Rafael Silva - Portugal 79')
     elif packopen70 == 8:
