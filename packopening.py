@@ -3,57 +3,83 @@ def packmake80():
     packopen80 = randint(1, 26)
 
     if packopen80 == 1:
-        print('Linnea Bjorn - Sweden 81')
+        with open("playersdata.txt", "a") as f:
+            print('Linnea Bjorn - Sweden 81', file=f)
     elif packopen80 == 2:
-        print('Pavel Sokolov - Czech Republic 80')
+        with open("playersdata.txt", "a") as f:
+            print('Pavel Sokolov - Czech Republic 80', file=f)
     elif packopen80 == 3:
-        print('Anika Gupta - India 80')
+        with open("playersdata.txt", "a") as f:
+            print('Anika Gupta - India 80', file=f)
     elif packopen80 == 4:
-        print('Leonidas Papadopoulos - Greece 81')
+        with open("playersdata.txt", "a") as f:
+            print('Leonidas Papadopoulos - Greece 81', file=f)
     elif packopen80 == 5:
-        print('Freya Jensen - Denmark 83')
+        with open("playersdata.txt", "a") as f:
+            print('Freya Jensen - Denmark 83', file=f)
     elif packopen80 == 6:
-        print('Hiro Tanaka - Japan 85')
+        with open("playersdata.txt", "a") as f:
+            print('Hiro Tanaka - Japan 85', file=f)
     elif packopen80 == 7:
-        print('Anita Patel - Canada 86')
+        with open("playersdata.txt", "a") as f:
+            print('Anita Patel - Canada 86', file=f)
     elif packopen80 == 8:
-        print('Matej Kolar - Croatia 83')
+        with open("playersdata.txt", "a") as f:
+            print('Matej Kolar - Croatia 83', file=f)
     elif packopen80 == 9:
-        print('Isak Karlsson - Sweden 82')
+        with open("playersdata.txt", "a") as f:
+            print('Isak Karlsson - Sweden 82', file=f)
     elif packopen80 == 10:
-        print('Mia Andersson - Norway 87')
+        with open("playersdata.txt", "a") as f:
+            print('Mia Andersson - Norway 87', file=f)
     elif packopen80 == 11:
-        print('Arjun Rao - India 80')
+        with open("playersdata.txt", "a") as f:
+            print('Arjun Rao - India 80', file=f)
     elif packopen80 == 12:
-        print('Valentina Costa - Argentina 84')
+        with open("playersdata.txt", "a") as f:
+            print('Valentina Costa - Argentina 84', file=f)
     elif packopen80 == 13:
-        print('Yuri Ivanov - Russia 80')
+        with open("playersdata.txt", "a") as f:
+            print('Yuri Ivanov - Russia 80', file=f)
     elif packopen80 == 14:
-        print('Irina Petrova - Bulgaria 81')
+        with open("playersdata.txt", "a") as f:
+            print('Irina Petrova - Bulgaria 81', file=f)
     elif packopen80 == 15:
-        print('Lucas da Silva - Brazil 89')
+        with open("playersdata.txt", "a") as f:
+            print('Lucas da Silva - Brazil 89', file=f)
     elif packopen80 == 16:
-        print('Nadia Petrovic - Serbia 89')
+        with open("playersdata.txt", "a") as f:
+            print('Nadia Petrovic - Serbia 89', file=f)
     elif packopen80 == 17:
-        print('Marco Hernandez - Spain 88')
+        with open("playersdata.txt", "a") as f:
+            print('Marco Hernandez - Spain 88', file=f)
     elif packopen80 == 18:
-        print('Katarina Novak - Czech Republic 81')
+        with open("playersdata.txt", "a") as f:
+            print('Katarina Novak - Czech Republic 81', file=f)
     elif packopen80 == 19:
-        print('Andrei Ionescu - Romania 80')
+        with open("playersdata.txt", "a") as f:
+            print('Andrei Ionescu - Romania 80', file=f)
     elif packopen80 == 20:
-        print('Elena Volkova - Ukraine 82')
+        with open("playersdata.txt", "a") as f:
+            print('Elena Volkova - Ukraine 82', file=f)
     elif packopen80 == 21:
-        print('David Alonso - Spain 88')
+        with open("playersdata.txt", "a") as f:
+            print('David Alonso - Spain 88', file=f)
     elif packopen80 == 22:
-        print('Ingrid Jorgensen - Norway 89')
+        with open("playersdata.txt", "a") as f:
+            print('Ingrid Jorgensen - Norway 89', file=f)
     elif packopen80 == 23:
-        print('Juan Martinez - Spain 87')
+        with open("playersdata.txt", "a") as f:
+            print('Juan Martinez - Spain 87', file=f)
     elif packopen80 == 24:
-        print('Lars Olsen - Denmark 84')
+        with open("playersdata.txt", "a") as f:
+            print('Lars Olsen - Denmark 84', file=f)
     elif packopen80 == 25:
-        print('Maria Sanchez - Spain 88')
+        with open("playersdata.txt", "a") as f:
+            print('Maria Sanchez - Spain 88', file=f)
     elif packopen80 == 26:
-        print('Ahmed Abadi - Egypt 87')
+        with open("playersdata.txt", "a") as f:
+            print('Ahmed Abadi - Egypt 87', file=f)
 
 def packmake70():
     packopen70 = randint(1, 17)
@@ -77,43 +103,60 @@ def packmake70():
         with open("playersdata.txt", "a") as f:
             print('Sofia Kovač - Croatia 70', file=f)
     elif packopen70 == 7:
-        print('Rafael Silva - Portugal 79')
+        with open("playersdata.txt", "a") as f:
+            print('Rafael Silva - Portugal 79', file=f)
     elif packopen70 == 8:
-        print('Leila Hassan - Egypt 70')
+        with open("playersdata.txt", "a") as f:
+            print('Leila Hassan - Egypt 70', file=f)
     elif packopen70 == 9:
-        print('Viktor Novak - Serbia 79')
+        with open("playersdata.txt", "a") as f:
+            print('Viktor Novak - Serbia 79', file=f)
     elif packopen70 == 10:
-        print('Maya Chen - China 70')
+        with open("playersdata.txt", "a") as f:
+            print('Maya Chen - China 70', file=f)
     elif packopen70 == 11:
-        print('Nikolai Volkov - Ukraine 75')
+        with open("playersdata.txt", "a") as f:
+            print('Nikolai Volkov - Ukraine 75', file=f)
     elif packopen70 == 12:
-        print('Carmen Morales - Mexico 72')
+        with open("playersdata.txt", "a") as f:
+            print('Carmen Morales - Mexico 72', file=f)
     elif packopen70 == 13:
-        print('Matteo Bianchi - Italy 79')
+        with open("playersdata.txt", "a") as f:
+            print('Matteo Bianchi - Italy 79', file=f)
     elif packopen70 == 14:
-        print('Isabella Rojas - Colombia 74')
+        with open("playersdata.txt", "a") as f:
+            print('Isabella Rojas - Colombia 74', file=f)
     elif packopen70 == 15:
-        print('Lars Jansen - Netherlands 79')
+        with open("playersdata.txt", "a") as f:
+            print('Lars Jansen - Netherlands 79', file=f)
     elif packopen70 == 16:
-        print('Serena Montoya - Colombia 71')
+        with open("playersdata.txt", "a") as f:
+            print('Serena Montoya - Colombia 71', file=f)
     elif packopen70 == 17:
-        print('Hassan Al-Mansur - Saudi Arabia 76')
+        with open("playersdata.txt", "a") as f:
+            print('Hassan Al-Mansur - Saudi Arabia 76', file=f)
 
 def packmake90():
     packopen90 = randint(1, 6)
 
     if packopen90 == 1:
-        print('Astrid Larsen - Norway 91')
+        with open("playersdata.txt", "a") as f:
+            print('Astrid Larsen - Norway 91', file=f)
     elif packopen90 == 2:
-        print('Sergei Ortod - Russia 90')
+        with open("playersdata.txt", "a") as f:
+            print('Sergei Ortod - Russia 90', file=f)
     elif packopen90 == 3:
-        print('Aisha Pablo - Spain 90')
+        with open("playersdata.txt", "a") as f:
+            print('Aisha Pablo - Spain 90', file=f)
     elif packopen90 == 4:
-        print('Ivan Nikolav - Serbia 90')
+        with open("playersdata.txt", "a") as f:
+            print('Ivan Nikolav - Serbia 90', file=f)
     elif packopen90 == 5:
-        print('Yuki Tanaka - Japan 90')
+        with open("playersdata.txt", "a") as f:
+            print('Yuki Tanaka - Japan 90', file=f)
     elif packopen90 == 6:
-        print('Alejandro Rodriguez - Argentina 92')
+        with open("playersdata.txt", "a") as f:
+            print('Alejandro Rodriguez - Argentina 92', file=f)
 
 def clear_players_data():
     # Clear the content of playersdata.txt
