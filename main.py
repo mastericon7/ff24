@@ -166,7 +166,7 @@ def fusionteam():
             if transition_frame < transition_duration:
                 alpha = int((transition_frame / transition_duration) * 255)
                 current_bg = None
-                if selected_option == 0:
+                if selected_option == 0: #551*738
                     current_bg = background_1
                 elif selected_option == 1:
                     current_bg = background_2
@@ -210,27 +210,27 @@ def packs():
 
     pygame.init()
 
-    screen_width, screen_height = 1920, 1080
-    screen = pygame.display.set_mode((screen_width, screen_height))
-
     menu_font = pygame.font.Font('data/fonts/justsansbold.otf', 36)
     menu_options = ['Go Back']
-    selected_option = 1
+    selected_option = 0
 
-    bluepack_image = pygame.image.load("data/images/bluepack80.png").convert_alpha()
-    goldpack_image = pygame.image.load("data/images/goldpack80.png").convert_alpha()
-    brownpack_image = pygame.image.load("data/images/brownpack80.png").convert_alpha()
-
-    image_width = 369
-    image_height = 469
-    image_margin = 20
-    num_options = 3
-    total_width = num_options * image_width + (num_options - 1) * image_margin
-    start_x = (screen_width - total_width) // 2
-    start_y = 500
-
-    target_y = start_y  # Initialize target position
-
+    bluepack_image = pygame.image.load("data/packimages/bluepack90.png")
+    yellowpack_image = pygame.image.load("data/packimages/goldpack80.png")
+    redpack_image = pygame.image.load("data/packimages/brownpack70.png")
+    stadium_image = pygame.image.load("data/images/stadium_background.png")
+    def read_latest_player():
+        with open("playersdata.txt", "r") as f:
+            lines = f.readlines()
+            if lines:
+                return lines[-1].strip()  # Return the last line without newline character
+        return None
+    def display_player_info(player_info):
+        if player_info:
+            text = menu_font.render(player_info, True, (240, 240, 240))
+            player_item_y = 100
+            text_rect = text.get_rect(center=(screen_width // 5, player_item_y))
+            screen.blit(text, text_rect)
+    
     prunning = True
     while prunning:
         for event in pygame.event.get():
@@ -238,34 +238,29 @@ def packs():
                 pygame.quit()
                 clear_players_data()
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_UP:
+                if event.key == pygame.K_LEFT:
                     selected_option = (selected_option - 1) % (len(menu_options) + 3)
-                    target_y -= 100  # Move the selected option higher
-                elif event.key == pygame.K_DOWN:
-                    selected_option = (selected_option + 1) % (len(menu_options) + 3)
-                    target_y += 100  # Move the selected option lower
-                elif event.key == pygame.K_LEFT:
-                    selected_option = (selected_option - 1) % (num_options + 1)
-                    if selected_option != 0:
-                        target_y -= 50  # Move the selected pack higher
                 elif event.key == pygame.K_RIGHT:
-                    selected_option = (selected_option + 1) % (num_options + 1)
-                    if selected_option != 0:
-                        target_y -= 50  # Move the selected pack higher
+                    selected_option = (selected_option + 1) % (len(menu_options) + 3)
                 elif event.key == pygame.K_RETURN:
                     if selected_option == 0:
                         # Start the game
+                        prunning = False
                         fusionteam()
                     elif selected_option == 1:
-                        packblue90()
+                        # Start the game
+                        packblue70()
                     elif selected_option == 2:
+                        # Start the game
                         packblue80()
                     elif selected_option == 3:
-                        packblue70()
+                        # Start the game
+                        packblue90()
 
         screen.fill((52, 52, 52))
-
-        menu_item_y = start_y - 80
+        latest_player = read_latest_player()
+        display_player_info(latest_player)
+        menu_item_y = 200
         for i, option in enumerate(menu_options):
             color = (25, 120, 165) if i == selected_option else (240, 240, 240)
             text = menu_font.render(option, True, color)
@@ -273,26 +268,37 @@ def packs():
             screen.blit(text, text_rect)
             menu_item_y += 80
 
-        # Display selectable menu points from images next to each other with animation
-        x_position = start_x
-        for i, image in enumerate([bluepack_image, goldpack_image, brownpack_image]):
-            if selected_option == i + 1:
-                pygame.draw.rect(screen, (255, 255, 255), pygame.Rect(x_position - 5, target_y - 5, image_width + 10, image_height + 10), 3)
-            screen.blit(pygame.transform.scale(image, (image_width, image_height)), (x_position, target_y))
-            x_position += image_width + image_margin
+        # Display selectable menu points from images next to each other
+        image_width = bluepack_image.get_width()
+        image_height = bluepack_image.get_height()
+        x_position = (screen_width - 3 * 369 - 2 * 20) // 2
+        if selected_option == 1:
+            screen.blit(pygame.transform.scale(redpack_image, (369, 469)), (x_position, 500))
+            pygame.draw.rect(screen, (255, 255, 255), pygame.Rect(x_position - 5, 495, 379, 479), 3)
+        else:
+            screen.blit(pygame.transform.scale(redpack_image, (369, 469)), (x_position, 500))
+        x_position += 389
+        if selected_option == 2:
+            screen.blit(pygame.transform.scale(yellowpack_image, (369, 469)), (x_position, 500))
+            pygame.draw.rect(screen, (255, 255, 255), pygame.Rect(x_position - 5, 495, 379, 479), 3)
+        else:
+            screen.blit(pygame.transform.scale(yellowpack_image, (369, 469)), (x_position, 500))
+        x_position += 389
+        if selected_option == 3:
+            screen.blit(pygame.transform.scale(bluepack_image, (369, 469)), (x_position, 500))
+            pygame.draw.rect(screen, (255, 255, 255), pygame.Rect(x_position - 5, 495, 379, 479), 3)
+        else:
+            screen.blit(pygame.transform.scale(bluepack_image, (369, 469)), (x_position, 500))
 
-        # Smoothly adjust the target position
-        target_y += (start_y - target_y) * 0.1
 
         pygame.display.flip()
-    clear_players_data()
     pygame.quit()
 
 #ends of defs and start of main
-
 pygame.init()
 screen = pygame.display.set_mode((screen_width, screen_height))
-
+clock = pygame.time.Clock()
+font = pygame.font.SysFont("Arial", 18)
 #images
 bg = pygame.image.load("data/images/FF24.png").convert_alpha()
 bg2 = pygame.image.load("data/images/ff24loading.png").convert_alpha()
@@ -308,6 +314,10 @@ text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True
 text_rect = text.get_rect()
 text_rect.center = (960, 540)
 
+def update_fps():
+	fps = str(int(clock.get_fps()))
+	fps_text = font.render(fps, 1, pygame.Color("coral"))
+	return fps_text
 #show_splash_screen()
 show_main_menu()
 running = True
@@ -315,15 +325,25 @@ while running:
     global frunning
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+           running = False
     screen.fill((52, 52, 52))
     screen.blit(text, text_rect)
+    #screen.blit(update_fps(), (10,0))
     
     keys = pygame.key.get_pressed()
     if keys[pygame.K_ESCAPE]:
         frunning = True
         show_main_menu()
     
+    clock.tick(240)
     pygame.display.flip()
 clear_players_data()
 pygame.quit()
+'''
+        player_data_list = read_from_file()
+        y_position = 50  # Start position for y-coordinate
+        for player_data in player_data_list:
+            text_surface = menu_font.render(player_data.strip(), True, (255, 255, 255))
+            screen.blit(text_surface, (50, y_position))
+            y_position += 30  # Move down for the next player data
+'''

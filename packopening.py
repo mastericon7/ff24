@@ -162,6 +162,9 @@ def clear_players_data():
     # Clear the content of playersdata.txt
     with open("playersdata.txt", "w") as f:
         f.write("")
+def read_from_file():
+    with open('playersdata.txt', 'r') as file:
+        return file.readlines()
 
 def packblue70():
     makingblue70 = randint(1, 8)
