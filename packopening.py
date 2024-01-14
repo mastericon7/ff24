@@ -100,7 +100,7 @@ def packmake70():
         with open("playersdata.txt", "a") as f:
             print('Andrei Petrov - Russia 74', file=f)
     elif packopen70 == 6:
-        with open("playersdata.txt", "a") as f:
+        with open("playersdata.txt", "a", encoding="utf-8") as f:
             print('Sofia Kovač - Croatia 70', file=f)
     elif packopen70 == 7:
         with open("playersdata.txt", "a") as f:
@@ -172,7 +172,7 @@ def packblue70():
     if makingblue70 == 1:
         packmake70()
     elif makingblue70 == 2:
-        packmake80()
+        packmake70()
     elif makingblue70 == 3:
         packmake70()
     elif makingblue70 == 4:

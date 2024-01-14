@@ -219,14 +219,14 @@ def packs():
     redpack_image = pygame.image.load("data/packimages/brownpack70.png")
     stadium_image = pygame.image.load("data/images/stadium_background.png")
     def read_latest_player():
-        with open("playersdata.txt", "r") as f:
+        with open("playersdata.txt", "r", encoding="utf-8") as f:
             lines = f.readlines()
             if lines:
                 return lines[-1].strip()  # Return the last line without newline character
         return None
     def display_player_info(player_info):
         if player_info:
-            text = menu_font.render(player_info, True, (240, 240, 240))
+            text = menu_font.render(player_info, True, (70, 107, 64))
             player_item_y = 100
             text_rect = text.get_rect(center=(screen_width // 5, player_item_y))
             screen.blit(text, text_rect)
@@ -307,9 +307,9 @@ bg2 = pygame.image.load("data/images/ff24loading.png").convert_alpha()
 justsans = pygame.font.Font('data/fonts/justsansbold.otf', 40)
 
 #texts
-white = (25, 120, 165)
+blue = (25, 120, 165)
 font = justsans  # Remove pygame from the front
-text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True, white)
+text = font.render("Hello, welcome to the Fusion! The Fusion of Football!", True, blue)
 
 text_rect = text.get_rect()
 text_rect.center = (960, 540)
